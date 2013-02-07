@@ -1,7 +1,7 @@
 ###Huffman Decoder
 __________________
 
-very simple decoder for huffman algorithm,
+Huffman  Coding  & Encoding for python,
 
 usage:
 
