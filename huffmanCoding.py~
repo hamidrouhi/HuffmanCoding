@@ -3,6 +3,7 @@
 #	http://wikipedia.org/Huffman_coding
 
 def heap_gen(Data):
+	#global tree,parent
 	tree=list(Data)
 	while len(tree)>1:
 		LCh=min(tree)
@@ -19,6 +20,7 @@ def heap_gen(Data):
 	
 	''' generate huffman Code '''
 def encode(huffheap, prefix = ''):
+	#global keys
 	if len(huffheap) == 2:
 		key=(huffheap[1],str(prefix))
 		keys.append(key)
@@ -26,7 +28,7 @@ def encode(huffheap, prefix = ''):
 	else:
 		encode(huffheap[1], prefix + '0')
 		encode(huffheap[2], prefix + '1')
-
+#	print keys
 
 def get_data():	
 	global string
@@ -43,7 +45,7 @@ def get_CharCount(string):
 		items=list(items)
 		huffheap.append((items[1],items[0]))
 	huffheap.sort()
-	huffheap=heap_gen(huffheap)
+	heap_gen(huffheap)
 	encode(huffheap)
 
 def codes():
